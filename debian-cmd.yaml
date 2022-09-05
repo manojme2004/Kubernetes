@@ -9,5 +9,5 @@ spec:
   - name: command-demo-container
     image: debian
     command: ["printenv"]
-    arg: ["HOSTNAME", "KUBERNETES_PORT"]
+    args: ["HOSTNAME", "KUBERNETES_PORT"]
   restartPolicy: OnFailure
