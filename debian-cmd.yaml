@@ -4,7 +4,6 @@ metadata:
   name: command-demo
   labels:
     purpose: demonstrate-command
-  namespace: default
 spec:
   containers:
   - name: command-demo-container
