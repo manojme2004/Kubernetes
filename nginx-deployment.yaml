@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name:  nginx-pod
+  labels:
+    app:  nginx
+spec:
+  container:
+  - name:  nginx-container
+    image:  nginx:1.18
+    env:
+    - name: HELLO_MSG
+      value: "Hello from mannu"
+    - name: GREETING
+      value: "You are Awesome, keep learning ..."
+            
