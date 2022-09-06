@@ -8,7 +8,7 @@ spec:
   initContainers:
   - name: init-myservice
     image: busybox:1.28
-    command: ['sh', '-c', 'until nslookup myservice; do echo waiting for myservice; sleep 5; done']
+    command: ['sh', '-c', 'until nslookup myservice; do echo waiting for myservice; sleep 5; done;']
   containers:
   - name: myapp-container
     image: busybox:1.28
