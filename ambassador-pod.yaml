@@ -19,7 +19,7 @@ spec:
       mountPath: /usr/share/ngix/html
 
   - name: app-container-server
-    image: nginx
+    image: nginx:stable-alpine
     ports:
       - containerPort: 80
     volumeMounts:
