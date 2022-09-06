@@ -13,13 +13,13 @@ spec:
   - name: app-container-poller
     image: yauritux/busybox-curl
     command: ["/bin/sh"]
-    args: ["-c", "while true; do curl 127.0.0.1:81 > /usr/share/nginx/html/index.html; sleep 10; done"]
+    args: ["-c", "while true; do curl 127.0.0.1:81 >> /usr/share/nginx/html/index.html; sleep 10; done"]
     volumeMounts:
     - name: shared
       mountPath: /usr/share/ngix/html
 
   - name: app-container-server
-    image: nginx:stable-alpine
+    image: nginx:1.22.0-alpine
     ports:
       - containerPort: 80
     volumeMounts:
