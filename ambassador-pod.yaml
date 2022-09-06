@@ -12,7 +12,7 @@ spec:
   containers:
   - name: app-container-poller
     image: yauritux/busybox-curl
-    command: ["/bin/bash"]
+    command: ["/bin/sh"]
     args: ["-c", "while true; do curl 127.0.0.1:81 > /usr/share/nginx/html/index.html; sleep 10; done"]
     volumeMounts:
     - name: shared
