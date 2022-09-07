@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
         - name: counter
-          image: centos:7
+          image: centos:alpine
           command:
             - "/bin/bash"
             - "-c"
