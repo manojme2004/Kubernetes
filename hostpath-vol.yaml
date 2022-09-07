@@ -13,6 +13,6 @@ spec:
   volumes:
     - name: test-volume
       hostPath:
-        path: /data
+        path: /usr/local
         type: Directory
   
