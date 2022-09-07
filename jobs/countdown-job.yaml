@@ -4,6 +4,7 @@ metadata:
   name: countdown-job
 spec:
   completions: 5
+  ttlSecondsAfterFinished: 10
   template:
     metadata:
       name: countdown-pod
@@ -14,5 +15,5 @@ spec:
           command:
             - "bin/bash"
             - "-c"
-            - "for i in 9 8 7 6 5 4 3 2 1 ; do each $i ; sleep 10 ; done"  
+            - "for i in 9 8 7 6 5 4 3 2 1 ; do each $i ; sleep 2 ; done"  
       restartPolicy: Never
