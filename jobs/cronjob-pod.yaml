@@ -1,7 +1,7 @@
 apiVersion: batch/v1beta1
-kind: CronJob-ttl
+kind: CronJob
 metadata:
-  name: cron-test
+  name: cron-test-ttl
   namespace: default
 spec:
   schedule: "*/1 * * * *"
