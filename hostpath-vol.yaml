@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+
+spec:
+  containers:
+    - image: "debian-slim:latest"
+      name:  my-app
+      volumeMounts:
+        - mountPath: /test-pd
+          name: test-volume
+  volumes:
+    - name: test-volume
+      hostPath:
+        path: /data
+        type: Directory
+  
