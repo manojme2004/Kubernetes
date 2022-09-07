@@ -1,12 +1,13 @@
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: cron-test
+  name: cron-test-ttl
   namespace: default
 spec:
   schedule: "*/1 * * * *"
   jobTemplate:
     spec:
+      ttlSecondsAfterFinished: 10
       template:
         spec:
           containers:
