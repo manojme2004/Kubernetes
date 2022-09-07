@@ -1,11 +1,11 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: countdown-job
+  name: count-job
 spec:
   template:
     metadata:
-      name: countdown-pod
+      name: count-pod
     spec:
       containers:
         - name: counter
