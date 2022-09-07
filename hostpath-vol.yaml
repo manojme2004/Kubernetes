@@ -5,7 +5,7 @@ metadata:
 
 spec:
   containers:
-    - image: "debian-slim:latest"
+    - image: nginx
       name:  my-app
       volumeMounts:
         - mountPath: /test-pd
