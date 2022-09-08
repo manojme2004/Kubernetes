@@ -4,9 +4,10 @@ metadata:
   name: my-pv-pod
 
 spec:
+  restartPolicy: Never
   containers:
-  - name: nginx
-    image: nginx:stable
+  - name: busybox
+    image: busybox:stable
     command: ["sh", "-c","echo Hello Team, This is persistnent volume claim 1 >> /output/success.txt"]
     volumeMounts:
     - name: my-pv
