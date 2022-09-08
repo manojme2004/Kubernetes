@@ -1,4 +1,4 @@
-apiVersion: v1
+Application design and buildapiVersion: v1
 kind: Pod
 metadata:
   name: adapter-pod
