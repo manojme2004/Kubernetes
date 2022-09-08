@@ -10,8 +10,9 @@ spec:
     image: busybox:stable
     command: ["sh", "-c","echo Hello Team, This is persistnent volume claim 1 >> /output/success.txt"]
     volumeMounts:
-    - name: my-pv
-      mountPath: /output
+    - mountPath: /output
+      name: my-pv
+      
 
   volumes:
     - name: my-pv
