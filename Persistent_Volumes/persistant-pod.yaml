@@ -7,7 +7,7 @@ spec:
   restartPolicy: Never
   containers:
   - name: busybox
-    image: busybox
+    image: busybox:stable
     command: ["sh", "-c","echo Hello Team, This is persistnent volume claim 1 >> /output/success.txt"]
     volumeMounts:
     - name: my-pv
