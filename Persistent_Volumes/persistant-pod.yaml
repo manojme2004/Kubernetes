@@ -4,6 +4,7 @@ metadata:
   name: my-pv-pod
 
 spec:
+  restartPolicy: Never
   containers:
   - name: busybox
     image: busybox:stable
