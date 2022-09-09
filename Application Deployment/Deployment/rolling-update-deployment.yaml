@@ -5,7 +5,7 @@ metadata:
   labels:
     app:  redis
 spec:
-  replicas: 10
+  replicas: 8
   selector:
     matchLabels:
       app: redis
@@ -13,8 +13,8 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 4
-      maxUnavailable: 4
+      maxSurge: 2
+      maxUnavailable: 2
   minReadySeconds: 10
   template:
     metadata:
@@ -23,4 +23,4 @@ spec:
     spec:
       containers:
       - name: redis-container
-        image: redis:7.0.4
+        image: redis:6.0
