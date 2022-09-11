@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: php-apache
+      run: php-apache
   replicas: 1
   template:
     metadata:
@@ -13,16 +13,14 @@ spec:
     spec:
       containers:
       - name: php-apache
-        image: k8s.gcr.io/hpa-example
+        image: registry.k8s.io/hpa-example
         ports:
         - containerPort: 80
         resources:
           requests:
             cpu: 200m
-            memory: 250Mi
           limits:
             cpu: 400m
-            memory: 500Mi
 ---
 apiVersion: v1
 kind: Service
@@ -48,4 +46,10 @@ spec:
     name: php-apache
   minReplicas: 1
   maxReplicas: 10
-  targetCPUUtilizationPercentage: 50
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
