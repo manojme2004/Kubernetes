@@ -2,7 +2,6 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: goproxy
-  namespace: default
   labels:
     app: goproxy
 spec:
@@ -16,7 +15,7 @@ spec:
         port: 8080
       initialDelaySeconds: 5
       periodSeconds: 10
-    liveinessProbe:
+    livenessProbe:
       tcpSocket:
         port: 8080
       initialDelaySeconds: 15
